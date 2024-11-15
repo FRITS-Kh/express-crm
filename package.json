@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon ./index.js --exec babel-node"
+    "start": "nodemon ./index.js --exec babel-node -e js"
   },
   "author": "FRITS-Kh",
   "license": "ISC",
@@ -11,6 +11,8 @@
   "dependencies": {
     "body-parser": "^1.20.3",
     "express": "^4.21.1",
+    "express-rate-limit": "^7.4.1",
+    "helmet": "^8.0.0",
     "mongoose": "^8.8.1",
     "nodemon": "^3.1.7"
   },

@@ -47,3 +47,19 @@ export const updateContact = async (req, res) => {
     res.send(error);
   }
 };
+
+export const deleteContact = async (req, res) => {
+  try {
+    const contactId = req.params.contactId;
+    const result = await Contact.findByIdAndDelete(contactId);
+
+    res.json({
+      message:
+        result === null
+          ? `Contact id: ${contactId} does not exist`
+          : `Successfully deleted contact id: ${contactId}`,
+    });
+  } catch (error) {
+    res.send(error);
+  }
+};

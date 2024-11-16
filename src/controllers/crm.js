@@ -1,8 +1,4 @@
-import mongoose from 'mongoose';
-
-import { ContactSchema } from '../models/crm';
-
-const Contact = mongoose.model('Contact', ContactSchema);
+import { Contact } from '../models/crm';
 
 export const addNewContact = async (req, res) => {
   try {
